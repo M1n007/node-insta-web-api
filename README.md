@@ -22,7 +22,7 @@ npm install node-insta-web-api
 ## API Reference
 
 * [Instagram](#instagramcredentials-opts)
-  * [.getImageByUser({username, first, after})](#getImageByUser)
+  * [.getImageByUser(username)](#getImageByUser)
 
 ### getImageByUser(params)
   ```js
