@@ -55,6 +55,7 @@ const InstaClient = new Insta();
   * [.changeProfileImage(image)](#changeProfileImage)
   * [.getImageByUser(username)](#getImageByUser)
   * [.getVideoByShortCode(shortCode)](#getVideoByShortCode)
+  * [.getLoginActivity()](#getLoginActivity)
 
 ### useExistingCookie()
   ```js
@@ -123,6 +124,15 @@ const InstaClient = new Insta();
   ```
   > Get video base64 and buffer by short code.
   - `shortCode`: A `String` 
+
+### getLoginActivity()
+  ```js
+    //login required
+    await InstaClient.useExistingCookie()
+    const data = await InstaClient.getLoginActivity();
+    console.log(data)
+  ```
+  > get login activity.
 
 
 ## License
