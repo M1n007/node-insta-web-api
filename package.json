@@ -1,6 +1,6 @@
 {
   "name": "node-insta-web-api",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "directories": {
@@ -9,7 +9,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["nodejs", "instagram api", "instagram web api", "instagram private api", "node insta web api"],
+  "keywords": [
+    "nodejs",
+    "instagram api",
+    "instagram web api",
+    "instagram private api",
+    "node insta web api"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
