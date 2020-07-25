@@ -82,6 +82,8 @@ const InstaClient = new Insta();
 ### changeProfileImage(image)
   ```js
     //login required
+
+    //using a url is under development
     //by url
     await InstaClient.login('username','password');
     await InstaClient.changeProfileImage('url')
