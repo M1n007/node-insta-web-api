@@ -13,7 +13,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "form-data": "^3.0.0",
+    "is-url": "^1.2.4",
     "node-fetch": "^2.6.0",
+    "tough-cookie": "^4.0.0",
     "useragent-from-seed": "^1.0.1"
   }
 }
