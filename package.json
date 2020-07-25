@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["nodejs", "instagram api", "instagram web api", "instagram private api", "node insta web api"],
   "author": "",
   "license": "ISC",
   "dependencies": {
