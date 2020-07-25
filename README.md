@@ -54,6 +54,7 @@ const InstaClient = new Insta();
   * [.getProfileData()](#getProfileData)
   * [.changeProfileImage(image)](#changeProfileImage)
   * [.getImageByUser(username)](#getImageByUser)
+  * [.getVideoByShortCode(shortCode)](#getVideoByShortCode)
 
 ### useExistingCookie()
   ```js
@@ -110,8 +111,16 @@ const InstaClient = new Insta();
   await client.getImageByUser('username')
   ```
   > Gets user photos.
-  - `params`
-    - `username`: A `String` 
+  - `username`: A `String` 
+
+### getVideoByShortCode(shortCode)
+  ```js
+    const data = await InstaClient.getVideoByShortCode('CDDs8unBjXX');
+    fs.writeFileSync('./test.mp4', data.base64, 'base64')
+    console.log(data)
+  ```
+  > Get video base64 and buffer by short code.
+  - `shortCode`: A `String` 
 
 
 ## License
