@@ -3,6 +3,10 @@
   "version": "1.0.2",
   "description": "",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/M1n007/node-insta-web-api.git"
+  },
   "directories": {
     "lib": "lib"
   },
