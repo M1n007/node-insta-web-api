@@ -16,7 +16,7 @@
     "instagram private api",
     "node insta web api"
   ],
-  "author": "",
+  "author": "M1n007",
   "license": "ISC",
   "dependencies": {
     "form-data": "^3.0.0",
