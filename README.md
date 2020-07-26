@@ -59,6 +59,8 @@ const InstaClient = new Insta();
   * [.getRecentNotification()](#getRecentNotification)
   * [.getDirectMessage()](#getDirectMessage)
   * [.getProfileByUsername(username)](#getProfileByUsername)
+  * [.followByUsername(username)](#followByUsername)
+  * [.unfollowByUsername(username)](#unfollowByUsername)
 
 ### useExistingCookie()
   ```js
@@ -162,6 +164,24 @@ const InstaClient = new Insta();
     console.log(data)
   ```
   > get profile user.
+
+### followByUsername(username)
+  ```js
+    //login required
+    await InstaClient.useExistingCookie()
+    const data = await InstaClient.followByUsername('username');
+    console.log(data)
+  ```
+  > follow user by username.
+
+### unfollowByUsername(username)
+  ```js
+    //login required
+    await InstaClient.useExistingCookie()
+    const data = await InstaClient.unfollowByUsername('username');
+    console.log(data)
+  ```
+  > unfollow user by username.
 
 
 ## License
