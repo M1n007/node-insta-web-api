@@ -56,6 +56,9 @@ const InstaClient = new Insta();
   * [.getImageByUser(username)](#getImageByUser)
   * [.getVideoByShortCode(shortCode)](#getVideoByShortCode)
   * [.getLoginActivity()](#getLoginActivity)
+  * [.getRecentNotification()](#getRecentNotification)
+  * [.getDirectMessage()](#getDirectMessage)
+  * [.getProfileByUsername(username)](#getProfileByUsername)
 
 ### useExistingCookie()
   ```js
@@ -133,6 +136,32 @@ const InstaClient = new Insta();
     console.log(data)
   ```
   > get login activity.
+
+### getRecentNotification()
+  ```js
+    //login required
+    await InstaClient.useExistingCookie()
+    const data = await InstaClient.getRecentNotification();
+    console.log(data)
+  ```
+  > get recent notification.
+
+### getDirectMessage()
+  ```js
+    //login required
+    await InstaClient.useExistingCookie()
+    const data = await InstaClient.getDirectMessage();
+    console.log(data)
+  ```
+  > get direct message.
+
+### getProfileByUsername(username)
+  ```js
+    await InstaClient.getCookie()
+    const data = await InstaClient.getProfileByUsername('username');
+    console.log(data)
+  ```
+  > get profile user.
 
 
 ## License
