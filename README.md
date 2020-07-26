@@ -63,6 +63,8 @@ const InstaClient = new Insta();
   * [.followByUsername(username)](#followByUsername)
   * [.unfollowByUsername(username)](#unfollowByUsername)
   * [.getStoriesByUsername(username)](#getStoriesByUsername)
+  * [.likeMediaByShortCode(shortCode)](#likeMediaByShortCode)
+  * [.unlikeMediaByShortCode(shortCode)](#unlikeMediaByShortCode)
 
 ### getCookie()
   ```js
@@ -202,6 +204,24 @@ const InstaClient = new Insta();
   ```
   > get stories by username.
   - `username`: A `String` 
+
+### likeMediaByShortCode(shortCode)
+  ```js
+    await InstaClient.useExistingCookie()
+    const data = await InstaClient.likeMediaByShortCode('CDFIAQtHUxxxx');
+    console.log(data)
+  ```
+  > like media by shortcode
+  - `shortCode`: A `String` 
+
+### unlikeMediaByShortCode(shortCode)
+  ```js
+    await InstaClient.useExistingCookie()
+    const data = await InstaClient.unlikeMediaByShortCode('CDFIAQtHUxxxx');
+    console.log(data)
+  ```
+  > unlike media by shortcode
+  - `shortCode`: A `String` 
 
 
 ## License
