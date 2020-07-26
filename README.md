@@ -49,6 +49,7 @@ const InstaClient = new Insta();
 ## API Reference
 
 * [Instagram](#instagramcredentials-opts)
+  * [.getCookie()](#getCookie)
   * [.useExistingCookie()](#useExistingCookie)
   * [.login(username, password)](#login)
   * [.getProfileData()](#getProfileData)
@@ -61,6 +62,13 @@ const InstaClient = new Insta();
   * [.getProfileByUsername(username)](#getProfileByUsername)
   * [.followByUsername(username)](#followByUsername)
   * [.unfollowByUsername(username)](#unfollowByUsername)
+  * [.getStoriesByUsername(username)](#getStoriesByUsername)
+
+### getCookie()
+  ```js
+  await client.getCookie()
+  ```
+  > getting guest cookie
 
 ### useExistingCookie()
   ```js
@@ -164,6 +172,7 @@ const InstaClient = new Insta();
     console.log(data)
   ```
   > get profile user.
+  - `username`: A `String` 
 
 ### followByUsername(username)
   ```js
@@ -173,6 +182,7 @@ const InstaClient = new Insta();
     console.log(data)
   ```
   > follow user by username.
+  - `username`: A `String` 
 
 ### unfollowByUsername(username)
   ```js
@@ -182,6 +192,16 @@ const InstaClient = new Insta();
     console.log(data)
   ```
   > unfollow user by username.
+  - `username`: A `String` 
+
+### getStoriesByUsername(username)
+  ```js
+    await InstaClient.useExistingCookie()
+    const data = await InstaClient.getStoriesByUsername('username');
+    console.log(data)
+  ```
+  > get stories by username.
+  - `username`: A `String` 
 
 
 ## License
