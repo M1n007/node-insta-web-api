@@ -71,6 +71,8 @@ const InstaClient = new Insta();
   * [.unsaveImageByShortCode(shortCode)](#saveImageByShortCode)
   * [.commentToMediaByShortCode({shortCode, commentText})](#commentToMediaByShortCode)
   * [.replyCommentByShortCode({shortCode, commentText, commentId})](#replyCommentByShortCode)
+  * [.getEmbedMediaByShortCode(shortCode)](#getEmbedMediaByShortCode)
+  * [.findPeopleByUsername(username)](#findPeopleByUsername)
 
 ### getCookie()
   ```js
@@ -294,6 +296,24 @@ const InstaClient = new Insta();
     - `shortCode`: A `String` 
     - `commentText`: A `String` 
     - `commentId`: A `String` 
+
+### getEmbedMediaByShortCode(shortCode)
+  ```js
+    await InstaClient.useExistingCookie()
+    const data = await InstaClient.getEmbedMediaByShortCode('CDFIAQtHUiw');
+    console.log(data)
+  ```
+  > get embed media by shortCode
+  - `shortCode`: A `String` 
+
+### findPeopleByUsername(username)
+  ```js
+    await InstaClient.useExistingCookie()
+    const data = await InstaClient.findPeopleByUsername('menjadi');
+    console.log(data)
+  ```
+  > find people bu username
+  - `username`: A `String`
 
 
 ## License
