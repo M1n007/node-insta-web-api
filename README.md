@@ -50,6 +50,7 @@ const InstaClient = new Insta();
 
 * [Instagram](#instagramcredentials-opts)
   * [.getCookie()](#getCookie)
+  * [._getMediaId(url)](#_getMediaId)
   * [.useExistingCookie()](#useExistingCookie)
   * [.login(username, password)](#login)
   * [.getProfileData()](#getProfileData)
@@ -65,12 +66,24 @@ const InstaClient = new Insta();
   * [.getStoriesByUsername(username)](#getStoriesByUsername)
   * [.likeMediaByShortCode(shortCode)](#likeMediaByShortCode)
   * [.unlikeMediaByShortCode(shortCode)](#unlikeMediaByShortCode)
+  * [.deleteMediaByShortCode(shortCode)](#deleteMediaByShortCode)
+  * [.saveImageByShortCode(shortCode)](#saveImageByShortCode)
+  * [.unsaveImageByShortCode(shortCode)](#saveImageByShortCode)
+  * [.commentToMediaByShortCode({shortCode, commentText})](#commentToMediaByShortCode)
+  * [.replyCommentByShortCode({shortCode, commentText, commentId})](#replyCommentByShortCode)
 
 ### getCookie()
   ```js
   await client.getCookie()
   ```
   > getting guest cookie
+
+### _getMediaId(url)
+  ```js
+  await client._getMediaId('https://www.instagram.com/p/CDFIAxxxxx/')
+  ```
+  > getting media id by url
+  - `url`: A `String`
 
 ### useExistingCookie()
   ```js
@@ -222,6 +235,65 @@ const InstaClient = new Insta();
   ```
   > unlike media by shortcode
   - `shortCode`: A `String` 
+
+### deleteMediaByShortCode(shortCode)
+  ```js
+    await InstaClient.useExistingCookie()
+    const data = await InstaClient.deleteMediaByShortCode('CDFIAQtHUxxxx');
+    console.log(data)
+  ```
+  > delete media by shortcode
+  - `shortCode`: A `String` 
+
+### saveImageByShortCode(shortCode)
+  ```js
+    await InstaClient.useExistingCookie()
+    const data = await InstaClient.saveImageByShortCode('CDFIAQtHUxxxx');
+    console.log(data)
+  ```
+  > save media by shortcode
+  - `shortCode`: A `String` 
+
+### unsaveImageByShortCode(shortCode)
+  ```js
+    await InstaClient.useExistingCookie()
+    const data = await InstaClient.unsaveImageByShortCode('CDFIAQtHUxxxx');
+    console.log(data)
+  ```
+  > save media by shortcode
+  - `shortCode`: A `String` 
+
+### commentToMediaByShortCode(params)
+  ```js
+    await InstaClient.useExistingCookie()
+    const payload = {
+        shortCode:'CDFIAQxxxx',
+        commentText: 'Your Text Comment'
+    }
+    const data = await InstaClient.commentToMediaByShortCode(payload);
+    console.log(data)
+  ```
+  > add comment to a media by shortcode
+  - `params`
+    - `shortCode`: A `String` 
+    - `commentText`: A `String`
+
+### replyCommentByShortCode(params)
+  ```js
+    await InstaClient.useExistingCookie()
+    const payload = {
+        shortCode:'CDFIAQtxxxx',
+        commentText: '%40username reply comment',
+        commentId: '17870873200867xxx'
+    }
+    const data = await InstaClient.replyCommentByShortCode(payload);
+    console.log(data)
+  ```
+  > reply comment in media by shortcode
+  - `params`
+    - `shortCode`: A `String` 
+    - `commentText`: A `String` 
+    - `commentId`: A `String` 
 
 
 ## License
