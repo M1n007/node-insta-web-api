@@ -1,6 +1,6 @@
 {
   "name": "node-insta-web-api",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "",
   "main": "index.js",
   "repository": {
@@ -20,7 +20,9 @@
     "instagram private api",
     "node insta web api"
   ],
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "author": "M1n007",
   "license": "ISC",
   "dependencies": {
