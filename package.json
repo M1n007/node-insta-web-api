@@ -7,6 +7,9 @@
     "type": "git",
     "url": "https://github.com/M1n007/node-insta-web-api.git"
   },
+  "contributors": [
+    "Hamdan Ibrahim ihamdan990@gmail.com"
+  ],
   "directories": {
     "lib": "lib"
   },
@@ -20,9 +23,6 @@
     "instagram private api",
     "node insta web api"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "author": "M1n007",
   "license": "ISC",
   "dependencies": {
