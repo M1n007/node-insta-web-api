@@ -73,6 +73,8 @@ const InstaClient = new Insta();
   * [.replyCommentByShortCode({shortCode, commentText, commentId})](#replyCommentByShortCode)
   * [.getEmbedMediaByShortCode(shortCode)](#getEmbedMediaByShortCode)
   * [.findPeopleByUsername(username)](#findPeopleByUsername)
+  * [.addPost(image, caption)](#addPost)
+  * [.addStory(image)](#addStory)
 
 ### getCookie()
   ```js
@@ -314,6 +316,28 @@ const InstaClient = new Insta();
   ```
   > find people bu username
   - `username`: A `String`
+
+### addPost(image, caption)
+  ```js
+    const photo = path.join(__dirname, '3.jpeg');
+    await InstaClient.useExistingCookie();
+    const resultAddPost = await InstaClient.addPost(photo, 'this is caption');
+    console.log(resultAddPost)
+  ```
+  > add post to feed
+  - `image`: A `String` path of image
+  - `caption`: A `String`
+
+### addStory(image)
+  ```js
+    const photo = path.join(__dirname, '3.jpeg');
+    await InstaClient.useExistingCookie();
+    const resultAddStory = await InstaClient.addStory(photo);
+    console.log(resultAddStory)
+  ```
+  > add story
+  - `image`: A `String` path of image
+
 
 
 ## License
