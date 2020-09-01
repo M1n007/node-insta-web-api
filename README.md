@@ -3,6 +3,8 @@
 
 Simple, easy implementation of the Instagram private web API.
 
+Some API reference from [https://github.com/jlobos/instagram-web-api](jlobos/instagram-web-api)
+
 ## Install
 
 ```bash
