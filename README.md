@@ -46,6 +46,25 @@ const InstaClient = new Insta();
     const result = await InstaClient.updateProfile(payload)
     console.log(result)
 })()
+
+//get following with pagination using existing cookie
+await InstaClient.useExistingCookie();
+const dataUser = await InstaClient.getProfileByUsername('amin_udin69');
+let following;
+let hasNextPage;
+let endCursor = '';
+const resultAllFollowing = [];
+do{
+    following = await InstaClient.getFollowingByDataUser(dataUser, 12, endCursor);
+    hasNextPage = following.page_info.has_next_page;
+    endCursor = following.page_info.end_cursor;
+    for (let index = 0; index < following.edges.length; index++) {
+        const element = following.edges[index];
+        resultAllFollowing.push(element.node)
+        
+    }
+}while(hasNextPage);
+console.log(resultAllFollowing)
 ```
 
 ## API Reference
@@ -77,6 +96,7 @@ const InstaClient = new Insta();
   * [.findPeopleByUsername(username)](#findPeopleByUsername)
   * [.addPost(image, caption)](#addPost)
   * [.addStory(image)](#addStory)
+  * [.getFollowingByDataUser(dataUser, size, cursor)](#getFollowingByDataUser)
 
 ### getCookie()
   ```js
@@ -339,6 +359,31 @@ const InstaClient = new Insta();
   ```
   > add story
   - `image`: A `String` path of image
+
+### getFollowingByDataUser(dataUser, size, cursor)
+  ```js
+    await InstaClient.useExistingCookie();
+    const dataUser = await InstaClient.getProfileByUsername('amin_udin69');
+    let following;
+    let hasNextPage;
+    let endCursor = '';
+    const resultAllFollowing = [];
+    do{
+        following = await InstaClient.getFollowingByDataUser(dataUser, 12, endCursor);
+        hasNextPage = following.page_info.has_next_page;
+        endCursor = following.page_info.end_cursor;
+        for (let index = 0; index < following.edges.length; index++) {
+            const element = following.edges[index];
+            resultAllFollowing.push(element.node)
+            
+        }
+    }while(hasNextPage);
+    console.log(resultAllFollowing)
+  ```
+  > add story
+  - `dataUser`: A `Object` data user
+  - `size`: A `Number` size per page
+  - `cursor`: A `String` end cursor
 
 
 
