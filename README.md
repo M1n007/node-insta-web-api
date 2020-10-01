@@ -90,9 +90,11 @@ console.log(resultAllFollowing)
   * [.deleteMediaByShortCode(shortCode)](#deleteMediaByShortCode)
   * [.saveImageByShortCode(shortCode)](#saveImageByShortCode)
   * [.unsaveImageByShortCode(shortCode)](#saveImageByShortCode)
+  * [.commentToMediaByMediaId({shortCode, commentText})](#commentToMediaByMediaId)
   * [.commentToMediaByShortCode({shortCode, commentText})](#commentToMediaByShortCode)
   * [.replyCommentByShortCode({shortCode, commentText, commentId})](#replyCommentByShortCode)
   * [.getEmbedMediaByShortCode(shortCode)](#getEmbedMediaByShortCode)
+  * [.findPeopleByUserId(userid)](#findPeopleByUserId)
   * [.findPeopleByUsername(username)](#findPeopleByUsername)
   * [.addPost(image, caption)](#addPost)
   * [.addStory(image)](#addStory)
@@ -289,6 +291,21 @@ console.log(resultAllFollowing)
   > save media by shortcode
   - `shortCode`: A `String` 
 
+### commentToMediaByMediaId(params)
+  ```js
+    await InstaClient.useExistingCookie()
+    const payload = {
+        mediaId: 100000,
+        commentText: 'Your Text Comment'
+    }
+    const data = await InstaClient.commentToMediaByMediaId(payload);
+    console.log(data)
+  ```
+  > add comment to a media by shortcode
+  - `params`
+    - `mediaId`: A `Number` 
+    - `commentText`: A `String`
+
 ### commentToMediaByShortCode(params)
   ```js
     await InstaClient.useExistingCookie()
@@ -330,13 +347,22 @@ console.log(resultAllFollowing)
   > get embed media by shortCode
   - `shortCode`: A `String` 
 
-### findPeopleByUsername(username)
+### findPeopleByUserId(userid)
+  ```js
+    await InstaClient.useExistingCookie()
+    const data = await InstaClient.findPeopleByUserId(00000);
+    console.log(data)
+  ```
+  > find people by userid
+  - `userid`: A `Number`
+
+### findPeopleByUsername(userid)
   ```js
     await InstaClient.useExistingCookie()
     const data = await InstaClient.findPeopleByUsername('menjadi');
     console.log(data)
   ```
-  > find people bu username
+  > find people by username
   - `username`: A `String`
 
 ### addPost(image, caption)
