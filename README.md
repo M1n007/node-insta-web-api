@@ -67,7 +67,7 @@ do{
 console.log(resultAllFollowing)
 ```
 
-## API Reference
+#### API Reference
 
 * [Instagram](#instagramcredentials-opts)
   * [.getCookie()](#getCookie)
