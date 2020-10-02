@@ -85,6 +85,7 @@ console.log(resultAllFollowing)
   * [.followByUsername(username)](#followByUsername)
   * [.unfollowByUsername(username)](#unfollowByUsername)
   * [.getStoriesByUsername(username)](#getStoriesByUsername)
+  * [.likeMediaById(mediaId)](#likeMediaById)
   * [.likeMediaByShortCode(shortCode)](#likeMediaByShortCode)
   * [.unlikeMediaByShortCode(shortCode)](#unlikeMediaByShortCode)
   * [.deleteMediaByShortCode(shortCode)](#deleteMediaByShortCode)
@@ -247,6 +248,15 @@ console.log(resultAllFollowing)
   ```
   > get stories by username.
   - `username`: A `String` 
+
+### likeMediaById(mediaId)
+  ```js
+    await InstaClient.useExistingCookie()
+    const data = await InstaClient.likeMediaById(00000);
+    console.log(data)
+  ```
+  > like media by media id
+  - `mediaId`: A `Number` 
 
 ### likeMediaByShortCode(shortCode)
   ```js
