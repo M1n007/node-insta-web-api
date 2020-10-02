@@ -352,7 +352,7 @@ console.log(resultAllFollowing)
 ### getMediaFeedByHashtag(name)
   ```js
     await InstaClient.useExistingCookie()
-    const data = await InstaClient.getEmbedMediaByShortCode('berita');
+    const data = await InstaClient.getMediaFeedByHashtag('berita');
     console.log(data)
   ```
   > get post by hastag
