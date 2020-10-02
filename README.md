@@ -95,6 +95,7 @@ console.log(resultAllFollowing)
   * [.replyCommentByShortCode({shortCode, commentText, commentId})](#replyCommentByShortCode)
   * [.getEmbedMediaByShortCode(shortCode)](#getEmbedMediaByShortCode)
   * [.getMediaFeedByHashtag(name)](#getMediaFeedByHashtag)
+  * [.getUserPostById(userId)](#getUserPostById)
   * [.findPeopleByUserId(userid)](#findPeopleByUserId)
   * [.findPeopleByUsername(username)](#findPeopleByUsername)
   * [.addPost(image, caption)](#addPost)
@@ -356,6 +357,15 @@ console.log(resultAllFollowing)
   ```
   > get post by hastag
   - `name`: A `String` 
+
+### getUserPostById(userId)
+```js
+  await InstaClient.useExistingCookie()
+  const data = await InstaClient.getEmbedMediaByShortCode(00000);
+  console.log(data)
+```
+> get post by user id
+- `userId`: A `Number` 
 
 ### findPeopleByUserId(userid)
   ```js
