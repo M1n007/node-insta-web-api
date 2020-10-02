@@ -361,7 +361,7 @@ console.log(resultAllFollowing)
 ### getUserPostById(userId)
 ```js
   await InstaClient.useExistingCookie()
-  const data = await InstaClient.getEmbedMediaByShortCode(00000);
+  const data = await InstaClient.getUserPostById(00000);
   console.log(data)
 ```
 > get post by user id
