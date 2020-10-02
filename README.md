@@ -94,6 +94,8 @@ console.log(resultAllFollowing)
   * [.commentToMediaByShortCode({shortCode, commentText})](#commentToMediaByShortCode)
   * [.replyCommentByShortCode({shortCode, commentText, commentId})](#replyCommentByShortCode)
   * [.getEmbedMediaByShortCode(shortCode)](#getEmbedMediaByShortCode)
+  * [.getMediaFeedByHashtag(name)](#getMediaFeedByHashtag)
+  * [.getUserPostById(userId)](#getUserPostById)
   * [.findPeopleByUserId(userid)](#findPeopleByUserId)
   * [.findPeopleByUsername(username)](#findPeopleByUsername)
   * [.addPost(image, caption)](#addPost)
@@ -347,6 +349,24 @@ console.log(resultAllFollowing)
   > get embed media by shortCode
   - `shortCode`: A `String` 
 
+### getMediaFeedByHashtag(name)
+  ```js
+    await InstaClient.useExistingCookie()
+    const data = await InstaClient.getEmbedMediaByShortCode('berita');
+    console.log(data)
+  ```
+  > get post by hastag
+  - `name`: A `String` 
+
+### getUserPostById(userId)
+```js
+  await InstaClient.useExistingCookie()
+  const data = await InstaClient.getUserPostById(00000);
+  console.log(data)
+```
+> get post by user id
+- `userId`: A `Number` 
+
 ### findPeopleByUserId(userid)
   ```js
     await InstaClient.useExistingCookie()
@@ -356,7 +376,7 @@ console.log(resultAllFollowing)
   > find people by userid
   - `userid`: A `Number`
 
-### findPeopleByUsername(userid)
+### findPeopleByUsername(username)
   ```js
     await InstaClient.useExistingCookie()
     const data = await InstaClient.findPeopleByUsername('menjadi');
