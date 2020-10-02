@@ -94,6 +94,7 @@ console.log(resultAllFollowing)
   * [.commentToMediaByShortCode({shortCode, commentText})](#commentToMediaByShortCode)
   * [.replyCommentByShortCode({shortCode, commentText, commentId})](#replyCommentByShortCode)
   * [.getEmbedMediaByShortCode(shortCode)](#getEmbedMediaByShortCode)
+  * [.getMediaFeedByHashtag(name)](#getMediaFeedByHashtag)
   * [.findPeopleByUserId(userid)](#findPeopleByUserId)
   * [.findPeopleByUsername(username)](#findPeopleByUsername)
   * [.addPost(image, caption)](#addPost)
@@ -346,6 +347,15 @@ console.log(resultAllFollowing)
   ```
   > get embed media by shortCode
   - `shortCode`: A `String` 
+
+### getMediaFeedByHashtag(name)
+  ```js
+    await InstaClient.useExistingCookie()
+    const data = await InstaClient.getEmbedMediaByShortCode('berita');
+    console.log(data)
+  ```
+  > get post by hastag
+  - `name`: A `String` 
 
 ### findPeopleByUserId(userid)
   ```js
