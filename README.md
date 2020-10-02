@@ -356,7 +356,7 @@ console.log(resultAllFollowing)
   > find people by userid
   - `userid`: A `Number`
 
-### findPeopleByUsername(userid)
+### findPeopleByUsername(username)
   ```js
     await InstaClient.useExistingCookie()
     const data = await InstaClient.findPeopleByUsername('menjadi');
