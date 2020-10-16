@@ -1,5 +1,5 @@
 
-### A Instagram Private Web API client 📷🔥 ❤️
+### A Instagram Private Web API client 📷 🔥 ❤️
 
 Simple, easy implementation of the Instagram private web API.
 
