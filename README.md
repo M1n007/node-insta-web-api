@@ -3,7 +3,9 @@
 
 Simple, easy implementation of the Instagram private web API.
 
-Some API reference from [jlobos/instagram-web-api](https://github.com/jlobos/instagram-web-api)
+Some API reference from [jlobos/instagram-web-api](https://github.com/jlobos/instagram-web-api) 
+Send DM using client from [dilame/instagram-private-api](https://github.com/dilame/instagram-private-api)
+
 
 ## Install
 
@@ -15,7 +17,7 @@ npm install node-insta-web-api
 
 ```
 //send dm by username
-using client from [dilame/instagram-private-api](https://github.com/dilame/instagram-private-api)
+
 
 const Insta = require('node-insta-web-api')
 const InstaClient = new Insta();
