@@ -3,7 +3,8 @@
 
 Simple, easy implementation of the Instagram private web API.
 
-Some API reference from [jlobos/instagram-web-api](https://github.com/jlobos/instagram-web-api) 
+Some API reference from [jlobos/instagram-web-api](https://github.com/jlobos/instagram-web-api)
+ 
 Send DM using client from [dilame/instagram-private-api](https://github.com/dilame/instagram-private-api)
 
 
