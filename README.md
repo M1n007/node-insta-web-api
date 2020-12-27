@@ -14,6 +14,23 @@ npm install node-insta-web-api
 ## Usage
 
 ```
+//send dm by username
+using client from [dilame/instagram-private-api](https://github.com/dilame/instagram-private-api)
+
+const Insta = require('node-insta-web-api')
+const InstaClient = new Insta();
+
+(async () => {
+  //required username & password for login
+  const username = '';
+  const password = '';
+  const usernameReceiver = ['username target'];
+  const message = 'text message';
+
+  const result = await InstaClient.sendDmByUsername(username, password, usernameReceiver, message);
+  console.log(result)
+})()
+
 //get profile data
 const Insta = require('node-insta-web-api')
 const InstaClient = new Insta();
@@ -102,6 +119,7 @@ console.log(resultAllFollowing)
   * [.addPost(image, caption)](#addPost)
   * [.addStory(image)](#addStory)
   * [.getFollowingByDataUser(dataUser, size, cursor)](#getFollowingByDataUser)
+  * [.sendDmByUsername(username, password, usernameReceiver, message)](#sendDmByUsername)
 
 ### getCookie()
   ```js
@@ -436,11 +454,27 @@ console.log(resultAllFollowing)
     }while(hasNextPage);
     console.log(resultAllFollowing)
   ```
-  > add story
+  > get following by data user
   - `dataUser`: A `Object` data user
   - `size`: A `Number` size per page
   - `cursor`: A `String` end cursor
 
+### sendDmByUsername(username, password, usernameReceiver, message)
+  ```js
+  //login required
+    const username = ''; //required
+    const password = ''; //required
+    const usernameReceiver = ['username target'];
+    const message = 'text message';
+
+    const result = await InstaClient.sendDmByUsername(username, password, usernameReceiver, message);
+    console.log(result)
+  ```
+  > send dm
+  - `username`: A `String` username for login
+  - `password`: A `String` password for login
+  - `usernameReceiver`: A `Array` list username receiver message/dm
+  - `message`: A `String` text message
 
 
 ## License

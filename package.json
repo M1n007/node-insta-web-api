@@ -26,6 +26,7 @@
   "author": "M1n007",
   "license": "ISC",
   "dependencies": {
+    "instagram-private-api": "^1.43.3",
     "is-url": "^1.2.4",
     "node-fetch": "^2.6.0",
     "request": "^2.88.2",
