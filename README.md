@@ -123,6 +123,7 @@ console.log(resultAllFollowing)
   * [.addStory(image)](#addStory)
   * [.getFollowingByDataUser(dataUser, size, cursor)](#getFollowingByDataUser)
   * [.sendDmByUsername(username, password, usernameReceiver, message)](#sendDmByUsername)
+  * [.sendConfirmationEmail()](#sendConfirmationEmail)
 
 ### getCookie()
   ```js
@@ -180,7 +181,8 @@ console.log(resultAllFollowing)
 ### updateProfile(params)
   ```js
     const payload = {
-        biography: 'test update bio 1'
+        biography: 'test update bio 1',
+        email: 'update@email.com'
     }
     const a = await InstaClient.updateProfile(payload)
     console.log(a)
@@ -188,6 +190,7 @@ console.log(resultAllFollowing)
   > update profile. for now you can only update your bio.
   - `params`
     - `biography`: A `String` 
+    - `email`: A `String` 
 
 ### getImageByUser(params)
   ```js
@@ -478,6 +481,13 @@ console.log(resultAllFollowing)
   - `password`: A `String` password for login
   - `usernameReceiver`: A `Array` list username receiver message/dm
   - `message`: A `String` text message
+
+### sendConfirmationEmail()
+  ```js
+   await InstaClient.useExistingCookie();
+   const sendConfirmationEmailResult = await InstaClient.sendConfirmationEmail();
+   console.log(sendConfirmationEmailResult)
+  ```
 
 
 ## License
