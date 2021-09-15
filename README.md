@@ -122,6 +122,7 @@ console.log(resultAllFollowing)
   * [.addPost(image, caption)](#addPost)
   * [.addStory(image)](#addStory)
   * [.getFollowingByDataUser(dataUser, size, cursor)](#getFollowingByDataUser)
+  * [.getFollowersByDataUser(dataUser, size, cursor)](#getFollowersByDataUser)
   * [.sendDmByUsername(username, password, usernameReceiver, message)](#sendDmByUsername)
   * [.sendConfirmationEmail()](#sendConfirmationEmail)
 
@@ -461,6 +462,31 @@ console.log(resultAllFollowing)
     console.log(resultAllFollowing)
   ```
   > get following by data user
+  - `dataUser`: A `Object` data user
+  - `size`: A `Number` size per page
+  - `cursor`: A `String` end cursor
+
+### getFollowersByDataUser(dataUser, size, cursor)
+  ```js
+    await InstaClient.useExistingCookie();
+    const dataUser = await InstaClient.getProfileByUsername('amin_udin69');
+    let followers;
+    let hasNextPage;
+    let endCursor = '';
+    const resultAllFollowers = [];
+    do{
+        followers = await InstaClient.getFollowersByDataUser(dataUser, 12, endCursor);
+        hasNextPage = followers.page_info.has_next_page;
+        endCursor = followers.page_info.end_cursor;
+        for (let i = 0; i < followers.edges.length; i++) {
+            const element = followers.edges[i];
+            resultAllFollowers.push(element.node)
+            
+        }
+    }while(hasNextPage);
+    console.log(resultAllFollowers)
+  ```
+  > get followers by data user
   - `dataUser`: A `Object` data user
   - `size`: A `Number` size per page
   - `cursor`: A `String` end cursor
