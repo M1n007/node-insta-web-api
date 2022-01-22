@@ -28,7 +28,7 @@
   "dependencies": {
     "instagram-private-api": "^1.43.3",
     "is-url": "^1.2.4",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "request": "^2.88.2",
     "request-promise-native": "^1.0.9",
     "useragent-from-seed": "^1.0.1"
